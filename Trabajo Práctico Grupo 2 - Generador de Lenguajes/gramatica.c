@@ -115,6 +115,6 @@ int es_regular(const Gramatica* g) {
             return 0;
         }
         actual = actual->siguiente;
-    }}
+    }
     return 1; 
 }
