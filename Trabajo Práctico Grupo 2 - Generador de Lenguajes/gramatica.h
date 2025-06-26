@@ -1,7 +1,7 @@
 #ifndef GRAMATICA_H
 #define GRAMATICA_H
 
-typedef struct nodoProduccion {
+typedef struct NodoProduccion {
     char no_terminal_izquierdo;
     char* lado_derecho;
     struct NodoProduccion* siguiente;
