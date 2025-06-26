@@ -95,3 +95,26 @@ void liberar_gramatica(Gramatica* g) {
 
     free(g);
 }
+
+int es_regular(const Gramatica* g) {
+    NodoProduccion* actual = g->producciones;
+
+    while (actual != NULL) {
+        int longitud = strlen(actual->lado_derecho);
+
+        if (longitud == 1) {
+            if (strchr(g->terminales, actual->lado_derecho[0]) == NULL) {
+                return 0; 
+            }
+        } else if (longitud == 2) {
+            if (strchr(g->terminales, actual->lado_derecho[0]) == NULL ||
+                strchr(g->no_terminales, actual->lado_derecho[1]) == NULL) {
+                return 0; 
+            }
+        } else {
+            return 0;
+        }
+        actual = actual->siguiente;
+    }}
+    return 1; 
+}
