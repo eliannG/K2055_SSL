@@ -18,5 +18,6 @@ Gramatica* crear_gramatica();
 void ingresar_gramatica(Gramatica* g);
 void mostrar_gramatica(const Gramatica* g);
 void liberar_gramatica(Gramatica* g);
+int es_regular(const Gramatica* g); 
 
 #endif
